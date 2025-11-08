@@ -5,7 +5,8 @@
       "src": "server/index.ts",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["server/**", "shared/**"]
+        "includeFiles": ["server/**", "shared/**"],
+        "runtime": "nodejs18.x"
       }
     },
     {
@@ -25,10 +26,5 @@
       "src": "/(.*)",
       "dest": "/dist/$1"
     }
-  ],
-  "functions": {
-    "server/index.ts": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }
