@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منظم الدعوات بالباركود</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0/lib/qr-code-styling.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bwip-js@4/dist/bwip-js-min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;700&family=Lalezar&family=Markazi+Text:wght@400;500;700&family=Tajawal:wght@400;500;700&display=swap');
+      body {
+        font-family: 'Tajawal', sans-serif;
+      }
+      /* More professional scrollbar for webkit browsers */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b; /* slate-800 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569; /* slate-600 */
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b; /* slate-500 */
+      }
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Remove ugly number input spinners */
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      @keyframes scan-line {
+        0% { top: 2%; }
+        50% { top: 98%; transform: translateY(-100%); }
+        100% { top: 2%; }
+      }
+      .scanner-laser {
+        position: absolute;
+        left: 10%;
+        width: 80%;
+        height: 2px;
+        background: #f87171; /* red-400 */
+        box-shadow: 0 0 10px 2px #ef4444; /* red-500 */
+        animation: scan-line 3s ease-in-out infinite;
+        border-radius: 9999px;
+      }
+      @keyframes fade-in-scale {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .animate-fade-in-scale {
+        animation: fade-in-scale 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      }
+      /* html5-qrcode styling */
+      #qr-reader {
+        border: 2px solid #3b82f6;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      #qr-reader__dashboard_section {
+        padding: 16px !important;
+      }
+      #qr-reader__dashboard_section button {
+        background-color: #3b82f6 !important;
+        color: white !important;
+        border-radius: 8px !important;
+        padding: 12px 24px !important;
+        font-weight: bold !important;
+        margin: 8px !important;
+      }
+      #qr-reader__dashboard_section button:hover {
+        background-color: #2563eb !important;
+      }
+      #qr-reader__camera_selection select {
+        padding: 8px !important;
+        border-radius: 4px !important;
+        border: 1px solid #d1d5db !important;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "vite": "https://aistudiocdn.com/vite@^7.1.9",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-950 text-slate-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

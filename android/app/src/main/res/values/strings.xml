@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">معازيم - QR دعوات</string>
+    <string name="app_description">تطبيق لإدارة الدعوات والمسح الضوئي للباركود</string>
+    <string name="title_activity_main">معازيم - QR دعوات</string>
+    <string name="package_name">com.invitationqr.app</string>
+    <string name="custom_url_scheme">com.invitationqr.app</string>
+    
+    <!-- Camera permissions -->
+    <string name="camera_permission_title">صلاحية الكاميرا</string>
+    <string name="camera_permission_message">يحتاج التطبيق إلى صلاحية الكاميرا لمسح رموز QR</string>
+    <string name="storage_permission_title">صلاحية التخزين</string>
+    <string name="storage_permission_message">يحتاج التطبيق إلى صلاحية التخزين لحفظ الصور والملفات</string>
+</resources>
